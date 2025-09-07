@@ -1,4 +1,5 @@
 # creating a Timer Countdown.
+# I will import time so I can use it for countdown. 
 import time
 #asking the user for the amount of time they want the timer to countdown.
 timer = int(input("timer duration (seconds): "))
