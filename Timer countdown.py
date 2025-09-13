@@ -1,9 +1,11 @@
-# creating a Timer Countdown.
-# I will import time so I can use it for countdown. 
+# Timer countdown
+# First I import the time module
 import time
-#asking the user for the amount of time they want the timer to countdown.
+# Then I ask the user to input the timer duration in seconds
+# I convert the input to an integer
 timer = int(input("timer duration (seconds): "))
-#counting down the amount of number the user said.
+# I use a for loop to count down from the timer value to 0
+# I use the range function to generate the countdown values
 for countdown in range(timer, 0, -1):
     seconds = countdown % 60
     minutes = int(countdown / 60) % 60
@@ -15,7 +17,8 @@ for countdown in range(timer, 0, -1):
     decades = int(countdown / 315360000) % 10
     centuries = int(countdown / 3153600000) % 10
     millenniums = int(countdown / 31536000000) % 10
+#   I use the time.sleep function to pause for 1 second between each countdown value
     time.sleep(1)
     print(f"{millenniums:02}:{centuries:02}:{decades:02}:{years:02}:{months:02}:{weeks:02}:{days:02}:{hours:02}:{minutes:02}:{seconds:02}")
-# after the countdown The program will print "Time's Up!"
+# After the countdown is finished, I print "Time's Up!"
 print("Time's Up!")
